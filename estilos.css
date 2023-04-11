@@ -1,0 +1,80 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 4px;
+    padding-left: 14%;
+    color: white;
+    background-color: blueviolet;
+    border-top: 2px solid rgb(107, 45, 164);
+    border-right: 2px solid rgb(107, 45, 164);
+    border-left: 2px solid rgb(107, 45, 164);
+    transition: all 0.2s;
+}
+/* El símbolo "dos puntos" justo después de un elemento nos permite ser
+más específicos para ciertos casos. Por ejemplo, si solo queremos afectar
+al último elemento de una lista, la última columna o fila de una tabla, etc.. */
+ul li:last-child {
+    border-bottom: 2px solid rgb(107, 45, 164);
+}
+
+ul li:hover {
+    cursor: pointer;
+    background-color: rgb(165, 79, 245);
+    font-size: 20px;
+    transform: scale(1.1, 1.1);
+}
+
+ul.menu {
+    clear: both;
+    float: left;
+    width: 100%;
+    border: none;
+}
+
+ul.menu li {
+    float: left;
+    padding: 4px;
+    border-top: 2px solid rgb(107, 45, 164);
+    border-bottom: 2px solid rgb(107, 45, 164);
+    border-left: 2px solid rgb(107, 45, 164);
+    border-right: 0;
+}
+
+ul.menu li:last-child {
+    border-right: 2px solid rgb(107, 45, 164);
+}
+
+@media screen and (max-width: 350px) {
+
+    ul.menu {
+        width: 200px;
+        float: none;
+        border-radius: 5px;
+    }
+
+    ul.menu li {
+        float: none;
+        border-bottom: none;
+    }
+
+    ul.menu li:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    ul.menu li:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom: 2px solid rgb(107, 45, 164);
+    }
+
+}
